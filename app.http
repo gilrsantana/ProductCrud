@@ -1,0 +1,23 @@
+# For more info on HTTP files go to https://aka.ms/vs/httpfile
+@baseUrl = http://localhost:7260
+@id = 27b646de-540a-4900-6ea7-08dd1d73b73b
+
+
+GET {{baseUrl}}/api/GetProducts
+###
+GET {{baseUrl}}/api/GetProduct/{{id}}
+###
+POST {{baseUrl}}/api/CreateProduct
+{
+  "name": "Back packet",
+  "price": 45.17
+}
+###
+PUT {{baseUrl}}/api/UpdateProduct
+{
+  "id": "75dc5674-7a03-4553-6ea5-08dd1d73b73b",
+  "name": "BACK PACKET",
+  "price": 44.55
+}
+###
+DELETE {{baseUrl}}/api/DeleteProduct/{{id}}
